@@ -1,0 +1,33 @@
+h1{
+	text-align: center;
+}
+.img-wrapper
+{
+
+  background-color : #EEE;
+    
+  height : 100px;
+  width : 200px;
+    
+  text-align : center;
+    vertical-align : middle;
+  /* Firefox, Chrome */
+  line-height : 100px;
+    
+  /* IE */
+
+}
+img{
+	width: 120px;
+	vertical-align : middle;
+}
+
+.border{
+	border-radius: 25px;
+    border: 2px solid #8AC007;
+}
+.canvas-border
+{
+	width: 1000;
+	height: 800;
+}
