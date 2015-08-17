@@ -1,5 +1,6 @@
 var ctx1, ctx2, ctx3, ctx4, ctx5;
 var lineWidth = 10;
+var lineStyle = 'round';
 var mx1, my1;
 var mx2, my2;
 var mx3, my3;
@@ -17,6 +18,11 @@ jQuery(function($){
 	ctx3.lineWidth = lineWidth;
 	ctx4.lineWidth = lineWidth;
 	ctx5.lineWidth = lineWidth;
+	ctx1.lineCap = lineStyle;
+	ctx2.lineCap = lineStyle;
+	ctx3.lineCap = lineStyle;
+	ctx4.lineCap = lineStyle;
+	ctx5.lineCap = lineStyle;
 	
 	socket.on('display1-st', function(data){
 		ctx1.beginPath();
