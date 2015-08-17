@@ -229,8 +229,8 @@
 				e.preventDefault();
 				var mx, my;
 				if ( e.type == 'touchstart' ) {
-					mx = e.originalEvent.touches[0].pageX;
-					my = e.originalEvent.touches[0].pageY;
+					mx = e.originalEvent.touches[0].pageX - this.offsetLeft;
+					my = e.originalEvent.touches[0].pageY - this.offsetTop; 
 				} else{
 					mx = e.pageX - this.offsetLeft;
 					my = e.pageY - this.offsetTop;  
