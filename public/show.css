@@ -1,0 +1,53 @@
+div{
+  text-align : center;
+}
+h1{
+	text-align: center;
+  margin-top: 0px;
+}
+.title
+{
+  background-color :#789;
+  padding: 40px;
+}
+.description
+{
+  padding: 30px;
+}
+.img-wrapper
+{
+
+  background-color : #EEE;
+    
+  height : 80px;
+  width : 200px;
+    
+  
+    vertical-align : middle;
+  /* Firefox, Chrome */
+  line-height : 80px;
+    
+  /* IE */
+
+}
+img{
+	width: 120px;
+	vertical-align : middle;
+}
+
+.border{
+	border-radius: 25px;
+    border: 2px solid #8AC007;
+}
+.canvas-border
+{
+	width: 1000;
+	height: 800;
+}
+
+
+.col-md-2 canvas{
+	
+	width: 200px;
+	height: 160px;
+}
