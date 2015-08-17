@@ -5,7 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="show.css">
 </head>
 <body>
+	<h1>台灣大哥大</h1>
 	<div class="canvas-border">
+		<form id = "passwordform" onsubmit='return verifier.test($("#password").val());'>
+			輸入公司名稱：
+			<input id="password" type="text">
+			<input type="submit">
+		</form>
 		<canvas id='touchpaint'  width="1000" height="800"></canvas>
 	</div>
 	<script src="js/paintinit.js"></script>
@@ -236,6 +242,10 @@
 				}
 			});
 		});
+	</script>
+	<script src = "js/verify.js"></script>
+	<script type="text/javascript">
+		var verifier = new Verifier("台灣大哥大");
 	</script>
 </body>
 </html>

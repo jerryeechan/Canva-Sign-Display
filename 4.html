@@ -1,13 +1,20 @@
 <html>
 <head>
-	<title>宣示書</title>
+	<title>亞太宣示書</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="show.css">
 </head>
 <body>
+	<h1>亞太</h1>
+	<form id = "passwordform" onsubmit='return verifier.test($("#password").val());'>
+			輸入公司名稱：
+			<input id="password" type="text">
+			<input type="submit">
+		</form>
 	<div class="canvas-border">
 		<canvas id='touchpaint'  width="1000" height="800"></canvas>
 	</div>
+
 	<script src="js/paintinit.js"></script>
 	
 	<script>
@@ -236,6 +243,10 @@
 				}
 			});
 		});
+	</script>
+	<script src = "js/verify.js"></script>
+	<script type="text/javascript">
+		var verifier = new Verifier("亞太");
 	</script>
 </body>
 </html>
