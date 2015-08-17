@@ -226,7 +226,14 @@
 	<script>
 		jQuery(function($){
 			var socket = io.connect();
-			
+			$('canvas').on('touchstart mousedown',function(e){
+				e.preventDefault();
+				var mx = e.pageX - this.offsetLeft;
+				var my = e.pageY - this.offsetTop;   
+				coord = {x: mx, y: my};
+				socket.emit('start2', coord);
+				//console.log(coord);
+			});
 			$('canvas').on('touchmove mousemove',function(e){
 				e.preventDefault();
 				if(curCoord!=null) {

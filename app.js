@@ -27,17 +27,36 @@ app.get('/sign5',function(req, res){
 
 io.sockets.on('connection', function(socket){
 	
+	socket.on('start1', function(data){
+		io.sockets.emit('display1-st', data);
+	});
 	socket.on('drawing1', function(data){
 		io.sockets.emit('display1', data);
+	});
+	
+	socket.on('start2', function(data){
+		io.sockets.emit('display2-st', data);
 	});
 	socket.on('drawing2', function(data){
 		io.sockets.emit('display2', data);
 	});
+	
+	socket.on('start3', function(data){
+		io.sockets.emit('display3-st', data);
+	});
 	socket.on('drawing3', function(data){
 		io.sockets.emit('display3', data);
 	});
+	
+	socket.on('start4', function(data){
+		io.sockets.emit('display4-st', data);
+	});
 	socket.on('drawing4', function(data){
 		io.sockets.emit('display4', data);
+	});
+	
+	socket.on('start5', function(data){
+		io.sockets.emit('display5-st', data);
 	});
 	socket.on('drawing5', function(data){
 		io.sockets.emit('display5', data);

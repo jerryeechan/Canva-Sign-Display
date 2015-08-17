@@ -18,52 +18,49 @@ jQuery(function($){
 	ctx4.lineWidth = lineWidth;
 	ctx5.lineWidth = lineWidth;
 	
-	
-	socket.on('display1', function(data){
+	socket.on('display1-st', function(data){
 		ctx1.beginPath();
-		ctx1.moveTo(mx1, my1);
+		ctx1.moveTo(data.x, data.y);
+	});
+	socket.on('display1', function(data){
 		ctx1.lineTo(data.x, data.y);
 		ctx1.stroke();
-		
-		mx1 = data.x;
-		my1 = data.y;
-	});
-	socket.on('display2', function(data){
-		ctx2.beginPath();
-		ctx2.moveTo(mx2, my2);
-		ctx2.lineTo(data.x, data.y);
-		ctx2.stroke();
-		
-		mx2 = data.x;
-		my2 = data.y;
-	});
-	socket.on('display3', function(data){
-		ctx3.beginPath();
-		ctx3.moveTo(mx3, my3);
-		ctx3.lineTo(data.x, data.y);
-		ctx3.stroke();
-		
-		mx3 = data.x;
-		my3 = data.y;
-	});
-	socket.on('display4', function(data){
-		ctx4.beginPath();
-		ctx4.moveTo(mx4, my4);
-		ctx4.lineTo(data.x, data.y);
-		ctx4.stroke();
-		
-		mx4 = data.x;
-		my4 = data.y;
-	});
-	socket.on('display5', function(data){
-		ctx5.beginPath();
-		ctx5.moveTo(mx5, my5);
-		ctx5.lineTo(data.x, data.y);
-		ctx5.stroke();
-		
-		mx5 = data.x;
-		my5 = data.y;
 	});
 	
+	socket.on('display2-st', function(data){
+		ctx2.beginPath();
+		ctx2.moveTo(data.x, data.y);
+	});
+	socket.on('display2', function(data){
+		ctx2.lineTo(data.x, data.y);
+		ctx2.stroke();
+	});
+	
+	socket.on('display3-st', function(data){
+		ctx3.beginPath();
+		ctx3.moveTo(data.x, data.y);
+	});
+	socket.on('display3', function(data){
+		ctx3.lineTo(data.x, data.y);
+		ctx3.stroke();
+	});
+	
+	socket.on('display4-st', function(data){
+		ctx4.beginPath();
+		ctx4.moveTo(data.x, data.y);
+	});
+	socket.on('display4', function(data){
+		ctx4.lineTo(data.x, data.y);
+		ctx4.stroke();
+	});
+	
+	socket.on('display5-st', function(data){
+		ctx5.beginPath();
+		ctx5.moveTo(data.x, data.y);
+	});
+	socket.on('display5', function(data){
+		ctx5.lineTo(data.x, data.y);
+		ctx5.stroke();
+	});
 });
 
