@@ -2,7 +2,7 @@
 <head>
 	<title>中華電信宣示書</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	
+	<script src = "js/jquery.min.js"></script>
 </head>
 <body>
 	<h1>中華電信</h1>
@@ -221,15 +221,21 @@
 		};
 	</script>
 	
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
 		jQuery(function($){
 			var socket = io.connect();
 			$('canvas').on('touchstart mousedown',function(e){
 				e.preventDefault();
-				var mx = e.pageX - this.offsetLeft;
-				var my = e.pageY - this.offsetTop;   
+				var mx, my;
+				if ( e.type == 'touchstart' ) {
+					mx = e.originalEvent.touches[0].pageX;
+					my = e.originalEvent.touches[0].pageY;
+				} else{
+					mx = e.pageX - this.offsetLeft;
+					my = e.pageY - this.offsetTop;  
+				}
 				coord = {x: mx, y: my};
 				socket.emit('start2', coord);
 				//console.log(coord);

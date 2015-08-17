@@ -3,6 +3,7 @@
 	<title>經濟部宣示書</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="show.css">
+	<script src = "js/jquery.min.js"></script>
 </head>
 <body>
 	<h1>經濟部</h1>
@@ -221,15 +222,20 @@
 		};
 	</script>
 	
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
 		jQuery(function($){
 			var socket = io.connect();
 			$('canvas').on('touchstart mousedown',function(e){
 				e.preventDefault();
-				var mx = e.pageX - this.offsetLeft;
-				var my = e.pageY - this.offsetTop;   
+				var mx, my;
+				if ( e.type == 'touchstart' ) {
+					mx = e.originalEvent.touches[0].pageX;
+					my = e.originalEvent.touches[0].pageY;
+				} else{
+					mx = e.pageX - this.offsetLeft;
+					my = e.pageY - this.offsetTop;  
+				}
 				coord = {x: mx, y: my};
 				socket.emit('start3', coord);
 				//console.log(coord);
