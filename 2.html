@@ -2,7 +2,7 @@
 <head>
 	<title>中華電信宣示書</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="show.css">
+	
 </head>
 <body>
 	<h1>中華電信</h1>
@@ -233,6 +233,10 @@
 					//console.log('emit drawing');
 					socket.emit('drawing2', curCoord);
 				}
+			});
+			$('canvas').on('touchend mouseup',function()
+			{	
+				
 			});
 		});
 	</script>

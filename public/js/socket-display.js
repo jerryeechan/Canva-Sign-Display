@@ -24,7 +24,7 @@ jQuery(function($){
 		ctx1.moveTo(mx1, my1);
 		ctx1.lineTo(data.x, data.y);
 		ctx1.stroke();
-		
+		ctx1.closePath();
 		mx1 = data.x;
 		my1 = data.y;
 	});
