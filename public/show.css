@@ -1,15 +1,18 @@
 div{
   text-align : center;
   margin:0px;
+  font-family:Microsoft JhengHei;
 }
 h1{
 	text-align: center;
   margin-top: 0px;
    color: #FDE660;
+  font-family:Microsoft JhengHei;
 }
 h2{
 
   color :#FFF;
+  font-family:Microsoft JhengHei;
 }
 .main
 {
@@ -55,12 +58,14 @@ img{
 .canvas-border
 {
 	width: 1000;
-	height: 800;
+	height: 600;
+  border-width: 1px;
+  border-style: solid;
 }
 
 
 .col-md-2 canvas{
 	
 	width: 200px;
-	height: 160px;
+	height: 120px;
 }
