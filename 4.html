@@ -2,18 +2,19 @@
 <head>
 	<title>亞太宣示書</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="show.css">
+	
 	<script src = "js/jquery.min.js"></script>
+    <script>
+      window.addEventListener("load",function() {
+      setTimeout(function(){
+      window.scrollTo(0, 1); }, 10);
+      });
+    </script>
 </head>
-<body>
-	<p>亞太</p>
-	<div class="canvas-border">
-	<form id = "passwordform" onsubmit='return verifier.test($("#password").val());'>
-			輸入公司名稱：
-			<input id="password" type="text">
-			<input type="submit">
-		</form>
-		<canvas id='touchpaint'  width="800" height="400"></canvas>
+  <body background="img/1136x640_4.jpg" style="background-repeat:no-repeat;">
+    <div class="canvas-border">
+      <canvas id='touchpaint'  width="725" height="362" style="margin-top: 150px; margin-left: 210px;">
+      </canvas>
 	</div>
 
 	<script src="js/paintinit.js"></script>
@@ -251,9 +252,6 @@
 			});
 		});
 	</script>
-	<script src = "js/verify.js"></script>
-	<script type="text/javascript">
-		var verifier = new Verifier("APTG");
-	</script>
+	
 </body>
 </html>

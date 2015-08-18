@@ -1,18 +1,15 @@
 div{
   text-align : center;
   margin:0px;
-  font-family:Microsoft JhengHei;
 }
 h1{
 	text-align: center;
   margin-top: 0px;
    color: #FDE660;
-  font-family:Microsoft JhengHei;
 }
 h2{
 
   color :#FFF;
-  font-family:Microsoft JhengHei;
 }
 .main
 {
@@ -34,14 +31,14 @@ h2{
 {
 
   background : url('img/badge.png') no-repeat center;
-  background-size: 100%;
-  height : 100px;
-  
+    background-size: 100%;
+  height : 80px;
+  width : 200px;
     
   
     vertical-align : middle;
   /* Firefox, Chrome */
-  line-height : 100px;
+  line-height : 80px;
     
   /* IE */
 
@@ -57,15 +54,13 @@ img{
 }
 .canvas-border
 {
-	width: 800;
-	height: 400;
-  border-width: 1px;
-  border-style: solid;
+	width: 1000;
+	height: 800;
 }
 
 
 .col-md-2 canvas{
 	
 	width: 200px;
-	height: 120px;
+	height: 100px;
 }
